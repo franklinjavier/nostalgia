@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Nostalgia</title>
+        <link rel="stylesheet" href="app.css" type="text/css" media="screen" charset="utf-8" />
+    </head>
+
+<body>
+
+    <div id="nostalgia" class="nostalgia">
+
+        <div class="wrapper">
+            <h1 class="left">Nostalgia</h1>
+            <select v-model="year" class="right">
+                <option value="undefined">Escolha o ano...</option>
+                <option v-repeat="videos" value="{{$key}}">{{$key}}</option>
+            </select>
+        </div>
+
+        <div class="video-wrapper">
+            <iframe width="944" height="600" class="wrapper {{display}}" src="http://www.youtube.com/embed/?playlist={{id}}&showinfo=1" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script src="http://vuejs.org/js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
+
