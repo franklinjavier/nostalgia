@@ -12,7 +12,7 @@
     <div id="nostalgia" class="nostalgia">
 
         <div class="wrapper">
-            <h1 class="left">Nostalgia</h1>
+            <h1 class="left"><a href="/">Nostalgia</a></h1>
             <select v-model="year" class="right">
                 <option value="undefined">Escolha o ano...</option>
                 <option v-repeat="videos" value="{{$key}}">{{$key}}</option>
@@ -22,12 +22,14 @@
         <div class="video-wrapper">
             <iframe width="944" height="600" class="wrapper {{display}}" src="http://www.youtube.com/embed/?playlist={{id}}&showinfo=1" frameborder="0" allowfullscreen></iframe>
         </div>
+
     </div>
 
-    <footer>
+    <footer class="wrapper">
         <p>This project is maintained by <a href="https://github.com/franklinjavier">franklinjavier</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <p><small>Hosted on GitHub Pages</small></p>
     </footer>
+
 
     <script src="http://vuejs.org/js/vue.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="javascripts/data.js"></script>
